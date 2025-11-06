@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #0b1220;
+  --surface: #101b2f;
+  --surface-alt: #15233c;
+  --card-bg: #1a2946;
+  --surface-hover: #24365a;
+  --input-bg: #1b2a46;
+  --border: #253a63;
+  --button-bg: rgba(148, 163, 184, 0.16);
+  --button-hover-bg: rgba(148, 163, 184, 0.28);
+  --divider: rgba(148, 163, 184, 0.18);
+  --text: #e4ebf7;
+  --muted-text: #9fb3d1;
+  --accent: #60a5fa;
+  --accent-strong: #3b82f6;
+  --accent-soft: rgba(96, 165, 250, 0.18);
+  --accent-border: rgba(96, 165, 250, 0.4);
+  --chip-bg: rgba(96, 165, 250, 0.16);
+  --chip-text: #cbdcfb;
+  --success: #4ade80;
+  --success-bg: rgba(74, 222, 128, 0.2);
+  --success-border: rgba(74, 222, 128, 0.35);
+  --danger-text: #fca5a5;
+  --danger-bg: rgba(248, 113, 113, 0.2);
+  --danger-border: rgba(248, 113, 113, 0.4);
+  --notice-bg: rgba(96, 165, 250, 0.12);
+  --notice-border: rgba(96, 165, 250, 0.4);
+  --heat-empty: #223357;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+input, select, textarea, button {
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-color: var(--border);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: var(--button-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  border-color: var(--accent-border);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+::selection {
+  background: var(--accent);
+  color: #0f172a;
+}
