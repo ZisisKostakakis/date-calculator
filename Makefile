@@ -40,9 +40,6 @@ ps: ## Show compose processes
 sh: ## Open a shell in a throwaway container
 	docker compose run --rm $(SERVICE) sh
 
-health: ## Check Flask health endpoint
-	curl -sf http://localhost:5000/health || true
-
 open: ## Open app in browser (macOS/Linux)
 	@if command -v open >/dev/null 2>&1; then \
 		open http://localhost:3000/; \

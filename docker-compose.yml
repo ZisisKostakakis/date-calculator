@@ -1,29 +1,15 @@
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile
-    environment:
-      FLASK_ENV: development
-      DATA_DIR: /code/data
-    volumes:
-      - ./backend:/code/backend
-      - ./data:/code/data
-    ports:
-      - "5000:5000"
-
   frontend:
     build:
       context: ./date_calculator
       dockerfile: Dockerfile
     command: npm run dev
+    env_file:
+      - .env
     environment:
-      NEXT_PUBLIC_API_URL: http://backend:5000
       PORT: "3000"
       HOST: 0.0.0.0
       CHOKIDAR_USEPOLLING: "true"
-    depends_on:
-      - backend
     volumes:
       - ./date_calculator:/app
       - /app/node_modules
