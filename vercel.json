@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd date_calculator && npm install && npm run build",
   "outputDirectory": "date_calculator/.next",
-  "installCommand": "cd date_calculator && npm install",
   "framework": "nextjs"
 }
