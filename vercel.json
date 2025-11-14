@@ -3,5 +3,4 @@
   "outputDirectory": "date_calculator/.next",
   "installCommand": "cd date_calculator && npm install",
   "framework": "nextjs",
-  "rootDirectory": "date_calculator"
 }
